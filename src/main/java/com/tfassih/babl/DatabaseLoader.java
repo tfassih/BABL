@@ -1,6 +1,6 @@
 package com.tfassih.babl;
 
-import com.tfassih.babl.dao.User;
+import com.tfassih.babl.entities.UsersEntity;
 import com.tfassih.babl.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -17,7 +17,7 @@ public class DatabaseLoader implements CommandLineRunner {
 
     @Override
     public void run(String... strings) throws Exception {
-        this.userRepo.save(new User("userName", "realName", "location"));
+        this.userRepo.save(new UsersEntity("personFace", "tim smith", "a spot"));
     }
 
 }
